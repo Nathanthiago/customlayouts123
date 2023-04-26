@@ -1,0 +1,138 @@
+git <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cadastro de Veículos</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h3>Anuncie os seus equipamentos gamer no mercado !</h3>
+			</div>
+			<div class="form-container">
+				<div class="form-header">
+					<p>Gadgets</p>
+				</div>
+				<div class="form-body">
+					<h1 class="form-title">Coloque os Filtros</h1>
+					<p>Descreva as características do equipamento e marque todas os opicionais e características que ele possui</p>
+					<form>
+						<div class="box-input">
+							<label for="title">
+								Tipo de equipamento: 
+								<span class="required-field">*</span>
+							</label>
+							<input type="text" name="title" id="title" class="block" 
+								placeholder="Tipo de equipamento"
+								minlength="1" maxlength="50" required>
+						</div>
+						<div class="box-input">
+							<label for="price">Preço do produto:
+								<span class="required-field">*</span>
+							</label>
+							<input type="number" id="price" name="price" class="block" required>
+						</div>
+						<div class="box-input">
+							<label for="description">Categoria: 
+								<span class="required-field">*</span>
+							</label>
+							<textarea
+								id="category" 
+								name="category" 
+								class="block"
+								cols="30"
+								rows="10"
+								required
+								placeholder="Descreva seu produto" 	
+							>
+							</textarea>
+						</div>
+						<div class="box-input">
+							<label for="unique_owner">Novo ou Usado? 
+								<span class="required-field">*</span>
+							</label>
+							<select id="unique_owner" name="unique_owner" required>
+								<option value="">Selecione...</option>
+								<option value="1">Novo</option>
+								<option value="0">Usado</option>
+							</select>
+						</div>
+						<div class="box-input">
+							<label for="brand">
+								Marca: 
+								<span class="required-field">*</span>
+							</label>
+							<input type="text" name="brand" id="brand" class="block" 
+								placeholder="Digite a marca do produto" required>
+						</div>
+						<div class="box-input">
+							<label for="model">
+								Modelo: 
+								<span class="required-field">*</span>
+							</label>
+							<input type="text" name="model" id="model" class="block" 
+								placeholder="Digite o modelo do seu produto" required>
+						</div>
+						<div class="box-input">
+							<label for="mileage">
+								Tempo de uso: 
+								<span class="required-field">*</span>
+							</label>
+							<input type="number" name="used-time" id="used-time" class="block" 
+							required>
+						</div>
+						<div class="box-input">
+							<label for="purchase_date">
+								Valor máximo do produto: 
+								<span class="required-field">*</span>
+							</label>
+							<input 
+								type="value" 
+								name="max_value" 
+								id="max_value" 
+								class="block" 
+								required
+							>
+						</div>
+						<div class="box-input">
+							<p>Tipo de conexão: <span class="required-field">*</span></p>
+							<input type="radio" id="wireless" name="wireless">
+							<label for="wireless">Sem fio</label>
+							<input type="radio" id="wire" name="wire">
+							<label for="wire">Com fio</label>
+						</div>
+						<div class="optional_box">
+							<p>Opcionais:</p>
+							<ul class="optional_list">
+								<li>
+									<input type="checkbox" id="couro" name="optional[]" value="couro">
+									<label for="airbag">Couro</label>
+								</li>
+								<li>
+									<input type="checkbox" id="bl" name="optional[]" value="bl">
+									<label for="bl">Bluetooth</label>
+								</li>
+								<li>
+									<input type="checkbox" id="mic_button" name="optional[]" value="mic_button">
+									<label for="mic_button">Botão de microfone</label>
+								</li>
+							</ul>
+						</div>
+						<div class="box-input">
+							<p>Envie imagens do produto: <span class="required-field">*</span></p>
+							<input 
+								type="file" 
+								multiple accept="image/png, image/jpeg" 
+								id="images"
+								name="images"
+								required
+							>
+						</div>
+						<input type="submit" class="btn-submit" value="Cadastrar">
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
